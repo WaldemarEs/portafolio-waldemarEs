@@ -177,6 +177,7 @@ Secciones dentro del main */
     font-family: 'JetBrains Mono', monospace;
     color: #1a1a1a;
     transition: all 0.5s ease-in-out;
+    font-size: 0.9rem;
 }
 #tech-section h2{
     margin-bottom: 15px;
@@ -203,6 +204,26 @@ footer{
     background-color: #f0f0f0;
     text-align: center;
 }
+/* Footer igual al p del header */
+#footer-p {
+    font-family: inherit;   /* misma fuente que header p */
+    font-size: 0.95rem;     /* mismo tamaño */
+    line-height: 1.4;
+    color: #333;            /* mismo color que header p */
+    text-align: center;
+}
+
+/* Llaves en naranja */
+.footer-deco {
+    color: #ff6000;
+    font-weight: 400;
+}
+
+/* Texto "waldemarEs" */
+.footer-text {
+    color: #333;            /* mismo color que footer-p */
+}
+
 
 /* Clases para mostrar y ocultar secciones */
 .activa{
@@ -210,4 +231,20 @@ footer{
 }
 .hidden{
     display: none;
+}
+
+/* Cita */
+#quote-text {
+    display: inline; /* Que el texto se mantenga en línea */
+    font-style: italic;
+}
+
+/* Autor */
+#quote-author {
+    display: inline; /* Mismo renglón */
+    font-style: normal;
+    font-weight: 600;
+    color: #555; /* Gris oscuro, menos contraste que el texto */
+    margin-left: 8px; /* Separación del texto de la cita */
+    font-size: 0.9em; /* Un poco más pequeño que el texto principal */
 }
