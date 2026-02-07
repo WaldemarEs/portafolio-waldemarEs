@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>waldemarEs</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-        rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Montserrat:wght@100..900&display=swap"
         rel="stylesheet">
 </head>
 
@@ -26,7 +24,9 @@
 
             <div class="header-right">
                 <p id="header-desc">
-                    Aplico la disciplina de la música y la pasión por los videojuegos al mundo digital, construyendo proyectos que combinan creatividad, tecnología y aprendizaje constante. Valoro mi familia y la inspiración que me brinda, llevando cada idea con propósito y entusiasmo.
+                    Como apasionado de la música y la tecnología, aplico la constancia y el pensamiento creativo a cada
+                    línea de código, desarrollando proyectos con propósito, entusiasmo y un enfoque en el aprendizaje
+                    continuo.
                 </p>
                 <blockquote>
                     <span id="quote-text"></span>
@@ -34,57 +34,100 @@
                 </blockquote>
             </div>
         </div>
-        <nav id="main-nav" aria-label="Navegación principal">
+        <nav id="main-nav">
             <ul>
-                <li><a href="#music-section">Música</a></li>
-                <li><a href="#tech-section">Tecnología</a></li>
-                <li><a href="#section-contact">Contacto</a></li>
+                <li><a href="#tech-section">Inicio</a></li>
+                <li><a href="#ufcd-section">UFCD</a></li>
+                <li><a href="#projects-section">Proyectos</a></li>
+                <li><a href="#contact-section">Contacto</a></li>
             </ul>
             <button id="lang-btn">ES/PT</button>
         </nav>
     </header>
 
     <main>
-        <section class="section activa" id="music-section">
-            <h2>Profesor de Música</h2>
-            <p>Como Profesor de Educación Musical formado en el Instituto Pedagógico de Caracas (UPEL), mi camino
-                profesional se ha construido a través de la guitarra clásica y la música folclórica venezolana. Mi
-                experiencia en la docencia me ha permitido desarrollar la habilidad de enseñar y comunicar ideas de
-                forma clara, manteniendo siempre la constancia y el orden que la música exige.</p>
-            <ul>
-                <li>Skills 1</li>
-                <li>Skills 2</li>
-                <li>Skills 3</li>
-                <li>Skills 4</li>
-                <li>Skills 5</li>
-            </ul>
-        </section>
-
-        <section class="section hidden" id="tech-section">
+        <section class="section activa" id="tech-section">
             <h2>Técnico en Informática - Sistemas</h2>
-            <p>Mi formación técnica se enfoca en el desarrollo de aplicaciones y entornos web. Cuento con conocimientos
+            <p id="home-description">Mi formación técnica se enfoca en el desarrollo de aplicaciones y entornos web.
+                Cuento con conocimientos
                 en lógica de programación y lenguajes como Java y C++, que utilizo como base para construir soluciones
                 digitales bien estructuradas. Además del desarrollo de software, mi formación incluye la gestión de
                 bases de datos, sistemas operativos y el mantenimiento de equipos informáticos.</p>
-            <ul>
-                <li>Skills 1</li>
-                <li>Skills 2</li>
-                <li>Skills 3</li>
-                <li>Skills 4</li>
-                <li>Skills 5</li>
-            </ul>
+        </section>
+
+        <section class="section hidden" id="ufcd-section">
+            <h2 id="ufcd-title">Unidades de Formación (UFCD)</h2>
+            <div class="materias-wrapper">
+                <div class="materia-col">
+                    <h4>Hardware & Redes</h4>
+                    <div class="materia-tags">
+                        <span title="Arquitetura interna do computador">0769</span>
+                        <span title="Dispositivos e periféricos">0770</span>
+                        <span title="Conexões de rede">0771</span>
+                        <span title="Sistemas operativos">0772</span>
+                        <span title="Rede local">0773</span>
+                        <span title="Software base">0774</span>
+                        <span title="Administração">0775</span>
+                    </div>
+                </div>
+
+                <div class="materia-col">
+                    <h4>Programação</h4>
+                    <div class="materia-tags">
+                        <span title="C/C++ Fundamentos">0782</span>
+                        <span title="C/C++ Ciclos">0783</span>
+                        <span title="C/C++ Funções">0784</span>
+                        <span title="C/C++ Formas complexas">0785</span>
+                        <span title="JAVA Fundamentos">0789</span>
+                        <span title="JAVA Web">10791</span>
+                        <span title="JAVA Avançada">0791</span>
+                    </div>
+                </div>
+
+                <div class="materia-col">
+                    <h4>Web & Datos</h4>
+                    <div class="materia-tags">
+                        <span title="Análise de sistemas">0781</span>
+                        <span title="Sistemas de bases de dados">0786</span>
+                        <span title="Administração de bases de dados">0787</span>
+                        <span title="Servidores WEB">0788</span>
+                        <span title="Páginas web">0792</span>
+                        <span title="Scripts CGI">0793</span>
+                    </div>
+                </div>
+
+                <div class="materia-col">
+                    <h4>Gestión</h4>
+                    <div class="materia-tags">
+                        <span title="Folha de cálculo">0778</span>
+                        <span title="Processador de texto">0754</span>
+                        <span title="Apresentação gráfica">0779</span>
+                        <span title="Gestão administrativa">0780</span>
+                        <span title="Sistemas de informação">0776</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section hidden" id="projects-section">
+            <h2>Proyectos</h2>
+            <p>Contenido en desarrollo...</p>
+        </section>
+
+        <section class="section hidden" id="contact-section">
+            <h2>Contacto</h2>
+            <p>Contenido en desarrollo...</p>
         </section>
     </main>
 
-   <footer id="footer">
+    <footer id="footer">
     <p id="footer-p">
-        &copy; <span id="footer-year">2026</span> - Creado por 
-        <span class="footer-deco">{</span>
-        <span id="footer-name" class="footer-text">waldemarEs</span>
+        &copy; 2026 - <span id="footer-label">Creado por</span> 
+        <span class="footer-deco">{</span> 
+        <span id="footer-name" class="footer-text">waldemarEs</span> 
         <span class="footer-deco">}</span>
     </p>
 </footer>
-
 
     <script src="script.js"></script>
 </body>
