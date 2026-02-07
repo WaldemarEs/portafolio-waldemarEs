@@ -161,7 +161,7 @@ main {
 }
 
 /* ================================
-   UFCD Y GLOBOS DE INFORMACIÓN
+   UFCD - DISEÑO MINIMALISTA
    ================================ */
 .materias-wrapper {
     display: grid;
@@ -182,33 +182,51 @@ main {
 .materia-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 15px; /* Espacio entre los números */
+    margin-top: 10px;
 }
 
 .materia-tags span {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 3px 8px;
-    border-radius: 3px;
-    transition: transform 0.2s, background 0.2s;
     position: relative;
     cursor: pointer;
+    background-color: transparent; /* Sin fondo negro */
+    color: #1a1a1a; /* Color de texto normal */
+    padding: 2px 0;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+/* La línea naranja que aparece al pasar el ratón */
+.materia-tags span::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff6000;
+    transition: width 0.3s ease;
 }
 
 .materia-tags span:hover {
-    background-color: #ff6000;
-    transform: scale(1.1);
+    color: #ff6000;
 }
 
-/* Magia del Globo (Tooltip) mediante JS 'data-info' */
+.materia-tags span:hover::before {
+    width: 100%;
+}
+
+/* Globo de información (Tooltip) */
 .materia-tags span::after {
     content: attr(data-info);
     position: absolute;
-    bottom: 130%;
+    bottom: 160%; 
     left: 50%;
     transform: translateX(-50%);
     background-color: #1a1a1a;
-    color: #ff6000;
+    color: #ffffff;
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -217,7 +235,7 @@ main {
     visibility: hidden;
     transition: all 0.2s ease;
     z-index: 100;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .materia-tags span:hover::after {
