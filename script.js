@@ -6,7 +6,7 @@ var navLinks = document.querySelectorAll("#main-nav a");
 var langBtn = document.getElementById("lang-btn");
 
 // ======================
-// Datos de UFCD (Nombres oficiales para los globos informativos)
+// Datos de UFCD
 // ======================
 const materiasData = {
   "0769": {
@@ -71,7 +71,7 @@ const materiasData = {
   },
   "0787": {
     es: "Administración de bases de datos",
-    pt: "Administração de bases de dados",
+    pt: "Administração de bases de datos",
   },
   "0788": {
     es: "Instalación y administración de servidores WEB",
@@ -97,18 +97,10 @@ const materiasData = {
     es: "Scripts CGI y hojas de estilo",
     pt: "Scripts CGI e folhas de estilo",
   },
-  PRA: {
-    es: "Portafolio de Reflexión y Aprendizaje",
-    pt: "Portfólio de Reflexão e Aprendizagem",
-  },
-  FPCT: {
-    es: "Formación Práctica en Contexto de Trabajo",
-    pt: "Formação Prática em Contexto de Trabalho",
-  },
 };
 
 // ======================
-// Textos en español y portugués
+// Textos de Traducción
 // ======================
 var translation = {
   es: {
@@ -121,9 +113,9 @@ var translation = {
     navContact: "Contacto",
     techTitle: "Técnico en Informática - Sistemas",
     techDesc:
-      "Mi formación técnica se enfoca en el desarrollo de aplicaciones y entornos web. Cuento con conocimientos en lógica de programación y lenguajes como Java y C++, que utilizo como base para construir soluciones digitales bien estructuradas. Además del desarrollo de software, mi formación incluye la gestión de bases de datos, sistemas operativos y el mantenimiento de equipos informáticos.",
+      "Mi formación técnica se especializa en el desarrollo de aplicaciones y entornos web. Cuento con conocimientos en C/C++, Java y MySQL como lenguajes base para construir soluciones digitales, sustentadas sobre una sólida base en arquitectura de sistemas y redes que me permite desarrollar proyectos integrales, estructurados y eficientes.",
     ufcdTitle: "Unidades de Formación (UFCD)",
-    footerLabel: "Creado por"
+    footerLabel: "Creado por",
   },
   pt: {
     btn: "PT",
@@ -135,14 +127,14 @@ var translation = {
     navContact: "Contato",
     techTitle: "Técnico em Informática - Sistemas",
     techDesc:
-      "Minha formación técnica se concentra no desenvolvimento de aplicações e ambientes web. Possuo conhecimentos em lógica de programação e linguagens como Java e C++, que utilizo como base para construir soluções digitais bem estructuradas. Além do desenvolvimento de software, minha formação incluye gestão de bases de datos, sistemas operacionais e manutenção de equipamentos de informática.",
+      "A minha formação técnica especializa-se no desenvolvimento de aplicações e ambientes web. Tenho conhecimentos em C/C++, Java e MySQL como linguagens base para construir soluções digitais, sustentadas sobre uma base sólida em arquitetura de sistemas e redes que me permite desenvolver projetos integrais, estruturados e eficientes.",
     ufcdTitle: "Unidades de Formação (UFCD)",
-    footerLabel: "Criado por"
+    footerLabel: "Criado por",
   },
 };
 
 // ======================
-// Citas Variadas
+// Citas
 // ======================
 var techQuotes = [
   {
@@ -165,63 +157,46 @@ var techQuotes = [
     pt: "O futuro pertence àqueles que criam.",
     author: "Steve Wozniak",
   },
-
-  {
-    es: "El software es una combinación de arte e ingeniería.",
-    pt: "O software é uma combinação de arte e engenharia.",
-    author: "Bill Gates",
-  },
-  {
-    es: "La disciplina es el puente entre las metas y los logros.",
-    pt: "A disciplina é a ponte entre as metas e as realizações.",
-    author: "Jim Rohn",
-  },
-  {
-    es: "Un buen diseño es como una melodía: todo parece estar en su lugar.",
-    pt: "Um bom design é como uma melodia: tudo parece estar no seu lugar.",
-    author: "Anónimo",
-  },
-  {
-    es: "Los videojuegos no solo nos enseñan a jugar, nos enseñan a resolver problemas.",
-    pt: "Os videogames não nos ensinam apenas a jogar, ensinam-nos a resolver problemas.",
-    author: "Anónimo",
-  },
-  {
-    es: "En la música como en el código, el silencio y los espacios también importan.",
-    pt: "Na música como no código, o silêncio e os espaços também importam.",
-    author: "Pensamiento Dev",
-  },
-  {
-    es: "La tecnología es el lienzo, el código es la partitura.",
-    pt: "A tecnologia é a tela, o código é a partitura.",
-    author: "Anónimo",
-  },
-  {
-    es: "Primero, resuelve el problema. Luego, escribe el código.",
-    pt: "Primeiro, resolva o problema. Depois, escreva o código.",
-    author: "John Johnson",
-  },
-  {
-    es: "La constancia es la clave del virtuosismo.",
-    pt: "A constância é a chave do virtuosismo.",
-    author: "Principio Musical",
-  },
-  {
-    es: "La elegancia en el código es la armonía de la función.",
-    pt: "A elegância no código é a harmonia da função.",
-    author: "Anónimo",
-  },
 ];
 
-var currentLang = "es";
+var currentLang = "pt"; // Idioma por defecto
 var currentQuote = null;
 
 // ======================
 // Funciones de Lógica
 // ======================
 
+function actualizarInterfaz() {
+  // Actualiza el botón y descripciones principales
+  langBtn.innerText = translation[currentLang].btn;
+  document.getElementById("header-desc").innerText =
+    translation[currentLang].headerDesc;
+  document.getElementById("footer-label").innerText =
+    translation[currentLang].footerLabel;
+
+  // Actualiza el menú de navegación
+  navLinks[0].innerText = translation[currentLang].navHome;
+  navLinks[1].innerText = translation[currentLang].navUfcd;
+  navLinks[2].innerText = translation[currentLang].navProjects;
+  navLinks[3].innerText = translation[currentLang].navContact;
+
+  // Actualiza títulos de secciones
+  const techH2 = document.querySelector("#tech-section h2");
+  const techP = document.querySelector("#tech-section p");
+  const ufcdH2 = document.querySelector("#ufcd-section h2");
+
+  if (techH2) techH2.innerText = translation[currentLang].techTitle;
+  if (techP) techP.innerText = translation[currentLang].techDesc;
+  if (ufcdH2) ufcdH2.innerText = translation[currentLang].ufcdTitle;
+
+  // Refresca componentes dinámicos
+  actualizarTooltips();
+  mostrarCita();
+}
+
 function mostrarCita() {
-  if (!currentQuote) return;
+  if (!currentQuote)
+    currentQuote = techQuotes[Math.floor(Math.random() * techQuotes.length)];
   document.getElementById("quote-text").textContent = currentQuote[currentLang];
   document.getElementById("quote-author").textContent =
     " — " + currentQuote.author;
@@ -249,32 +224,14 @@ function alternarSecciones(targetId) {
 
 function cambiarIdioma() {
   currentLang = currentLang === "es" ? "pt" : "es";
-
-  langBtn.innerText = translation[currentLang].btn;
-  document.getElementById("header-desc").innerText =
-    translation[currentLang].headerDesc;
-  document.getElementById("footer-label").innerText = translation[currentLang].footerLabel;
-
-  navLinks[0].innerText = translation[currentLang].navHome;
-  navLinks[1].innerText = translation[currentLang].navUfcd;
-  navLinks[2].innerText = translation[currentLang].navProjects;
-  navLinks[3].innerText = translation[currentLang].navContact;
-
-  const techH2 = document.querySelector("#tech-section h2");
-  const techP = document.querySelector("#tech-section p");
-  const ufcdH2 = document.querySelector("#ufcd-section h2");
-
-  if (techH2) techH2.innerText = translation[currentLang].techTitle;
-  if (techP) techP.innerText = translation[currentLang].techDesc;
-  if (ufcdH2) ufcdH2.innerText = translation[currentLang].ufcdTitle;
-
-  actualizarTooltips();
-  mostrarCita();
+  localStorage.setItem("userLang", currentLang); // Guardar preferencia
+  actualizarInterfaz();
 }
 
 // ======================
 // Eventos e Inicialización
 // ======================
+
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -286,6 +243,12 @@ navLinks.forEach((link) => {
 langBtn.addEventListener("click", cambiarIdioma);
 
 window.onload = () => {
+  // Recuperar idioma guardado si existe
+  const savedLang = localStorage.getItem("userLang");
+  if (savedLang) {
+    currentLang = savedLang;
+  }
+
+  actualizarInterfaz();
   alternarSecciones("tech-section");
-  actualizarTooltips();
 };
