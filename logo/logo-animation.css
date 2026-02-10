@@ -1,0 +1,59 @@
+/* logo-animation.css */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.logo-deco {
+    color: #f37021;
+    display: inline-block;
+    transition: transform 0.6s ease-out;
+}
+
+.logo-text {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 1.2s cubic-bezier(0.45, 0.05, 0.55, 0.95), opacity 0.4s;
+}
+
+/* El cursor naranja que parpadea */
+.logo-text::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 0.8em;
+    background-color: #f37021;
+    margin-left: 5px;
+    opacity: 0;
+}
+
+/* Estado cuando la animación está activa */
+.logo.active .logo-text {
+    max-width: 500px;
+    opacity: 1;
+    margin: 0 10px;
+}
+
+/* Animación del cursor: 3 parpadeos y desaparece */
+.logo.active .logo-text::after {
+    animation: blink-logo 0.8s step-end 3; 
+    animation-fill-mode: forwards; 
+    animation-delay: 1.2s;
+}
+
+@keyframes blink-logo {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Movimiento lateral de las llaves */
+.logo.active .logo-deco.left { transform: translateX(-5px); }
+.logo.active .logo-deco.right { transform: translateX(5px); }
