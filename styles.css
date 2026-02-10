@@ -85,6 +85,22 @@ header blockquote {
     font-size: 0.95rem;
 }
 
+/* Seleccionamos el enlace que envuelve al logo */
+a:has(.logo), 
+.logo-link { 
+    text-decoration: none; 
+    color: inherit; 
+    display: inline-block; /* mantener formato */
+}
+
+/* Evita cambio de color */
+a:has(.logo):visited,
+.logo-link:visited {
+    color: inherit;
+}
+
+
+
 /* ====================================== 
    BARRA DE NAVEGACIÓN
    ====================================== */
