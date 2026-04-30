@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>waldemar Escobar</title>
+    <title>Waldemar Escobar</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="logo/logo-animation.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Montserrat:wght@100..900&display=swap"
-        rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
+
 
 <body>
     <header>
@@ -62,54 +61,71 @@
             <h2 id="ufcd-title">Unidades de Formación (UFCD)</h2>
             <div class="materias-wrapper">
                 <div class="materia-col">
-                    <h4>Hardware & Redes</h4>
+                    <h4 id="cat-hardware">Hardware & Redes</h4>
                     <div class="materia-tags">
-                        <span title="Arquitetura interna do computador">0769</span>
-                        <span title="Dispositivos e periféricos">0770</span>
-                        <span title="Conexões de rede">0771</span>
-                        <span title="Sistemas operativos">0772</span>
-                        <span title="Rede local">0773</span>
-                        <span title="Software base">0774</span>
-                        <span title="Administração">0775</span>
+                        <span>0769</span>
+                        <span>0770</span>
+                        <span>0771</span>
+                        <span>0772</span>
+                        <span>0773</span>
+                        <span>0774</span>
+                        <span>0775</span>
                     </div>
                 </div>
 
                 <div class="materia-col">
-                    <h4>Programação</h4>
+                    <h4 id="cat-programacion">Programação</h4>
                     <div class="materia-tags">
-                        <span title="C/C++ Fundamentos">0782</span>
-                        <span title="C/C++ Ciclos">0783</span>
-                        <span title="C/C++ Funções">0784</span>
-                        <span title="C/C++ Formas complexas">0785</span>
-                        <span title="JAVA Fundamentos">0789</span>
-                        <span title="JAVA Web">10791</span>
-                        <span title="JAVA Avançada">0791</span>
+                        <span>0782</span>
+                        <span>0783</span>
+                        <span>0784</span>
+                        <span>0785</span>
+                        <span>0789</span>
+                        <span>10791</span>
+                        <span>0791</span>
                     </div>
                 </div>
 
                 <div class="materia-col">
-                    <h4>Web & Datos</h4>
+                    <h4 id="cat-web">Web e Dados</h4>
                     <div class="materia-tags">
-                        <span title="Análise de sistemas">0781</span>
-                        <span title="Sistemas de bases de dados">0786</span>
-                        <span title="Administração de bases de dados">0787</span>
-                        <span title="Servidores WEB">0788</span>
-                        <span title="Páginas web">0792</span>
-                        <span title="Scripts CGI">0793</span>
+                        <span>0781</span>
+                        <span>0786</span>
+                        <span>0787</span>
+                        <span>0788</span>
+                        <span>0792</span>
+                        <span>0793</span>
                     </div>
                 </div>
 
                 <div class="materia-col">
-                    <h4>Gestión</h4>
+                    <h4 id="cat-gestion">Gestão</h4>
                     <div class="materia-tags">
-                        <span title="Folha de cálculo">0778</span>
-                        <span title="Processador de texto">0754</span>
-                        <span title="Apresentação gráfica">0779</span>
-                        <span title="Gestão administrativa">0780</span>
-                        <span title="Sistemas de informação">0776</span>
+                        <span>0778</span>
+                        <span>0754</span>
+                        <span>0779</span>
+                        <span>0780</span>
+                        <span>0776</span>
                     </div>
                 </div>
             </div>
+<div id="ufcd-detalle-container" class="hidden">
+    <div class="detalle-header">
+        <h3 id="det-titulo"></h3>
+        <span id="det-stats"></span>
+    </div>
+    <div class="detalle-body">
+       <div class="det-seccion">
+    <h4 id="txt-label-resumen"></h4> 
+    <p id="det-resumen"></p>
+    </div>
+        <div class="det-seccion">
+    <h4 id="txt-label-trabajos"></h4>
+    <div id="det-links"></div>
+    </div>
+    
+    </div>
+</div>
         </section>
 
         <section class="section hidden" id="projects-section">
@@ -117,10 +133,57 @@
             <p>Contenido en desarrollo...</p>
         </section>
 
+        <!-- contacto -->
         <section class="section hidden" id="contact-section">
-            <h2>Contacto</h2>
-            <p>Contenido en desarrollo...</p>
-        </section>
+    <h2 id="contact-title">Contacto</h2>
+    
+    <div class="v8-grid">
+        <div class="v8-left">
+            <p class="v8-quote" id="contact-quote">
+                Si buscas un perfil <span class="v8-highlight">técnico</span> con una visión creativa y resolutiva.
+            </p>
+            <div class="v8-divider"></div>
+        </div>
+
+        <div class="v8-right">
+            <div class="v8-contact-list">
+                <div class="v8-group">
+                    <span class="v8-item-label" id="label-email">01 / E-Mail Directo</span>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=waldemar.escobar@gmail.com" target="_blank" rel="noopener noreferrer">
+   waldemarEscobar
+</a>
+                </div>
+                <div class="v8-group">
+                    <span class="v8-item-label" id="label-social">02 / Redes</span>
+                    <div class="v8-social-links">
+                        <a href="https://wa.me/351931395332" target="_blank" class="v8-social-link">Whatsapp</a>
+                        <a href="https://github.com/WaldemarEs" target="_blank" class="v8-social-link">Github</a>
+                        <a href="www.linkedin.com/in/waldemar-perez-50a494a5" target="_blank" class="v8-social-link">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="v8-group">
+                    <span class="v8-item-label" id="label-status">03 / Disponibilidad</span>
+                    <p id="status-detail" class="mono-text-detail">
+                        Figueira da Foz, PT<br>Presencial & Remoto
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- ventana para documentos -->
+         <div id="document-viewer" class="viewer-overlay" onclick="cerrarVisor()">
+    <div class="viewer-box" onclick="event.stopPropagation()">
+        <div class="viewer-header">
+            <button class="btn-cerrar-visor" onclick="cerrarVisor()">
+                <span class="logo-deco">{</span> X <span class="logo-deco">}</span>
+            </button>
+            <span id="viewer-filename"></span>
+        </div>
+        <iframe id="viewer-iframe" src="about:blank"></iframe>
+    </div>
+</div>
     </main>
 
     <footer id="footer">
@@ -132,6 +195,7 @@
         </p>
     </footer>
 
+    <script src="ufcds.js"></script>
     <script src="script.js"></script>
     <script src="logo/logo-animation.js"></script>
 </body>

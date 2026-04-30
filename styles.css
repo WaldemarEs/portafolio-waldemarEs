@@ -23,7 +23,7 @@ html, body {
 header {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 10px 10px;
+    padding: 1px 10px;
     flex: 0 0 auto;
     width: 100%;
 }
@@ -76,6 +76,7 @@ header p {
     margin-bottom: 10px;
     color: #333;
     font-size: 0.95rem;
+    text-align: justify;
 }
 
 header blockquote {
@@ -109,7 +110,7 @@ a:has(.logo):visited,
     justify-content: space-between;
     align-items: center;
     padding: 4px 15px;
-    margin-top: 8px; 
+    margin-top: 2px; 
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
@@ -125,10 +126,19 @@ a:has(.logo):visited,
     text-decoration: none;
     color: #1a1a1a;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 4px 8px; /* Añadimos espacio interno para el efecto de fondo */
+    
 }
 
 #main-nav a:hover { color: #ff6000; }
+
+#main-nav a.active-link {
+    color: #ff6000;
+    border-bottom: 1px solid #ff6000;
+    border-radius: 0 !important;
+    transition: none !important;
+}
 
 #lang-btn {
     padding: 5px 10px;
@@ -152,7 +162,7 @@ main {
 .section {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 15px 20px 40px 20px; 
+    padding: 5px 20px 40px 20px; 
     display: none; 
     flex-direction: column;
     background-color: #fff8f0; /* Fondo crema solo dentro de la caja */
@@ -161,7 +171,7 @@ main {
 }
 
 .section h2 {
-    margin-top: 15px; 
+    margin-top: 2px; 
     margin-bottom: 15px;
     font-size: 1.8rem;
     border-bottom: 2px solid #ff6000;
@@ -183,23 +193,24 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
-    margin: 15px 0 25px 0;
+    margin: 1px 0 1px 0;
 }
 
 .materia-col h4 {
     font-size: 0.75rem;
     color: #ff6000;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 4px;
+    padding-bottom: 2px;
 }
 
 .materia-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Espacio entre los números */
-    margin-top: 10px;
+    column-gap: 18px; 
+    row-gap: 2px; 
+    margin-top: 1px;
 }
 
 .materia-tags span {
@@ -258,6 +269,68 @@ main {
     opacity: 1;
     visibility: visible;
 }
+/* =======================
+UFCDs
+========================== */
+#ufcd-detalle-container {
+    margin-top: 5px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid #ff6000; /* Línea naranja de acento */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-family: 'JetBrains Mono', monospace; /* Manteniendo tu estilo técnico */
+    
+}
+
+#ufcd-detalle-container.hidden { 
+    
+    display: none; }
+
+.detalle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+#det-titulo { color: #ff6000; font-size: 1.2rem; margin: 0; }
+#det-stats { color: #888; font-size: 0.85rem; }
+
+.det-seccion h4 {
+    color: #333;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin: 20px 0 8px 0;
+    letter-spacing: 1px;
+}
+
+.det-seccion p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.85rem;
+    text-align: justify;
+    margin: 0;
+}
+
+#det-links { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+#det-links a {
+    text-decoration: none;
+    color: #ff6000;
+    border: 1px solid #ff6000;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+#det-links a:hover {
+    background-color: #ff6000;
+    color: white;
+}
+
 
 /* =================
    FOOTER
@@ -296,4 +369,227 @@ footer {
     color: #555;
     margin-left: 8px;
     font-size: 0.9em;
+}
+
+/* ======================================
+   VISOR OVERLAY - ESTILO MINIMALISTA
+   ====================================== */
+.viewer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.viewer-overlay.activa-visor {
+    display: flex;
+}
+
+.viewer-box {
+    width: 85%;
+    height: 80vh;
+    max-width: 1200px;
+    background: #fff8f0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+/* BARRA DE TÍTULO - ULTRADELGADA Y MINIMALISTA */
+.viewer-header {
+    padding: 6px 12px;
+    background: #fff8f0;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 32px;
+}
+
+/* Nombre del archivo a la izquierda - pequeño y discreto */
+#viewer-filename {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: #888;
+    letter-spacing: 0.3px;
+}
+
+/* Botón cerrar estilo línea de código */
+.btn-cerrar-visor {
+    background: none;
+    border: none;
+    color: #ff6000;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-cerrar-visor:hover {
+    background-color: #ff600010;
+}
+
+/* Quitar el logo-deco dentro del botón si existe */
+.btn-cerrar-visor .logo-deco {
+    font-size: 0.7rem;
+    color: #ff6000;
+}
+
+/* IFRAME - sin bordes */
+#viewer-iframe {
+    flex: 1;
+    border: none;
+    width: 100%;
+    background: #f5f5f0;
+}
+
+/* Scroll bloqueado cuando el visor está abierto */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* ======================================
+   VERSIÓN MÓVIL
+   ====================================== */
+@media (max-width: 768px) {
+    .viewer-box {
+        width: 95%;
+        height: 85vh;
+    }
+    
+    .viewer-header {
+        padding: 4px 10px;
+        min-height: 28px;
+    }
+    
+    #viewer-filename {
+        font-size: 0.6rem;
+    }
+    
+    .btn-cerrar-visor {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+    }
+}
+
+/* ======================================
+   ESPECÍFICOS: SECCIÓN CONTACTO (V8 CORREGIDO)
+   ====================================== */
+#contact-section.section {
+    
+    justify-content: flex-start;
+}
+
+
+.v8-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr; /* Damos más peso a la izquierda (la frase) */
+    gap: 80px;
+    align-items: start;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.v8-quote {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 2.8rem !important; /* Aumentado para recuperar el impacto */
+    font-weight: 300 !important;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin: 0 !important;
+    max-width: 600px;
+}
+
+.v8-highlight {
+    color: #ff6000;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.v8-divider {
+    height: 1px;
+    width: 80px;
+    background-color: #ff6000; /* Naranja para que combine con tu marca */
+    margin-top: 35px;
+}
+
+.v8-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding-top: 10px;
+}
+
+.v8-item-label {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: #999;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.v8-item-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.v8-item-value:hover {
+    color: #ff6000;
+    padding-left: 5px;
+}
+
+.v8-social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.v8-social-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #1a1a1a;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+.v8-social-link:hover {
+    color: #ff6000;
+    border-color: #ff6000;
+}
+
+.mono-text-detail {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Ajuste para tablets y móviles */
+@media (max-width: 900px) {
+    .v8-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .v8-quote {
+        font-size: 2rem !important;
+    }
 }
