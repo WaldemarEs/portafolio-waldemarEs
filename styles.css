@@ -504,9 +504,9 @@ body.no-scroll {
 }
 
 .v8-quote {
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 2.8rem !important; /* Aumentado para recuperar el impacto */
-    font-weight: 300 !important;
+    
+    font-size: 1.8rem !important; /* Aumentado para recuperar el impacto */
+    font-weight: 200 ;
     line-height: 1.1;
     color: #1a1a1a;
     margin: 0 !important;
@@ -582,6 +582,8 @@ body.no-scroll {
     color: #555;
     line-height: 1.5;
 }
+
+
 
 /* Ajuste para tablets y móviles */
 @media (max-width: 900px) {

@@ -12,7 +12,7 @@ const translation = {
   es: {
     btn: "ES",
     headerDesc: "Como apasionado de la música y la tecnología, aplico la constancia y el pensamiento creativo a cada línea de código, desarrollando proyectos con propósito, entusiasmo y un enfoque en el aprendizaje continuo.",
-    navHome: "Inicio",
+    navHome: "Início",
     navUfcd: "UFCD",
     navProjects: "Proyectos",
     navContact: "Contacto",
