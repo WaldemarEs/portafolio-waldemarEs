@@ -1,0 +1,20 @@
+* [33mc2b2202[m[33m ([m[1;31morigin/solo-tecInformatica[m[33m, [m[1;32msolo-tecInformatica[m[33m)[m correccion de FOUT en secciones y traduccion
+* [33m9fa0c9b[m Migración a WSL 2 y ajustes en secciones
+* [33ma830bb0[m cambios menores
+* [33m107d9b3[m cambio de idioma por defecto y mantener el idioma al ir a inicio
+* [33meedd97b[m direccion simplificada
+* [33m1a0b259[m revisadas las rutas de css y js de la carpeta que daba conflictos
+* [33m4d458c2[m actualizar web
+* [33mcad7306[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m logo con link al home
+* [33m649778a[m adicionado animacion de logo, carpeta logo con css y js separados de la web
+* [33me1cb58a[m margen de h2 section modificado
+[31m|[m *   [33m0362370[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #1 from WaldemarEs/solo-tecInformatica
+[31m|[m [32m|[m[31m\[m  
+[31m|[m [32m|[m[31m/[m  
+[31m|[m[31m/[m[32m|[m   
+* [32m|[m [33m6d977c0[m ajustes en UFCD minimalista
+* [32m|[m [33m9056e99[m cambios: parrafo principal idea mejorada (texto), secciones con parametros, traduccion, tamaño y color del footer
+* [32m|[m [33m300eef3[m Web corregida, solo tecnico en sistemas con otros arreglos
+[32m|[m[32m/[m  
+* [33m2732b74[m git init git add . git commit -m "Enhance footer design and improve tech section styling" git push origin main git status
+* [33m81d7c6f[m primer commit: proyecto portafolio dual
