@@ -332,6 +332,19 @@ window.onload = () => {
     actualizarInterfaz();
     alternarSecciones("tech-section");
     activarDetallesUFCD();
+
+    // ====================================================
+    // FORZAR LA APERTURA DE LA PRIMERA UFCD POR DEFECTO
+    // ====================================================
+    const ufcdPorDefecto = "0784"; 
+    const container = document.getElementById("ufcd-detalle-container");
+    
+    if (container) {
+      container.classList.remove("hidden"); 
+    }
+    codigoUfcdAbierta = ufcdPorDefecto;     
+    renderizarContenidoUFCD(ufcdPorDefecto); 
+
   } else {
     console.error("Error: No se cargó el archivo ufcds.js");
     // Mostrar mensaje al usuario

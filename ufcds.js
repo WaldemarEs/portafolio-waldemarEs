@@ -12,8 +12,8 @@ const materiasData = {
       creditos: 2.25
     },
     trabajos: [
-      { nombre: "Reflexão", url: "docs/0769_relatorio.pdf" },
-      { nombre: "Esquema da CPU", url: "docs/0769_cpu.png" }
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Montagem do computador", url: "/doc/0769/montagemWaldemarPerez.pdf" }
     ]
   },
   "0770": {
@@ -28,8 +28,8 @@ const materiasData = {
       creditos: 2.25
     },
     trabajos: [
-      { nombre: "Manual de Dispositivos", url: "docs/0771_dispositivos.pdf" },
-      { nombre: "Configuração de Periféricos", url: "docs/0771_config.docx" }
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Dispositivos de entrada e saida", url: "/doc/0770/perifericosDeEntradaESaida-waldemarPerez.pdf" }
     ]
   },
   "0771": {
@@ -44,9 +44,8 @@ const materiasData = {
       creditos: 2.25
     },
     trabajos: [
-      { nombre: "Relatório de Atividades (PRA)", url: "docs/0771_waldemar_pra.docx" },
-      { nombre: "Configuração de Redes (Packet Tracer)", url: "docs/0771_packet_tracer.pkt" },
-      { nombre: "Resumo Modelo OSI", url: "docs/0771_modelo_osi.pdf" }
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Roteamento Dinamico", url: "/doc/0771/ROTEAMENTO RIP OU DINÂMICO-waldemarPerez.png" }
     ]
   },
   "0772": {
@@ -61,13 +60,10 @@ const materiasData = {
       creditos: 2.25
     },
     trabajos: [
-      { nombre: "Instalação pfSense (VMware)", url: "docs/0772_pfsense.docx" },
-      { nombre: "Instalação Windows Server", url: "docs/0772_windows_server.pdf" },
-      { nombre: "Instalação Windows 11", url: "docs/0772_windows11.docx" },
-      { nombre: "Instalação Ubuntu Desktop", url: "docs/0772_ubuntu.pdf" }
+      { nombre: "PRA - Reflexão", url: "/doc/0772/0772 PRA.pdf" },
+      { nombre: "Resumo atividades desenvolvidas", url: "/doc/0772/Resumo das Atividades Desenvolvidas.pdf" }
     ]
-  }
-,
+  },
   "0773": {
     es: "Red local - instalación",
     pt: "Rede local - instalação",
@@ -80,9 +76,8 @@ const materiasData = {
         creditos: "2.25"
     },
     trabajos: [
-      { nombre: "Relatório de Atividades (PRA)", "url": "docs/0773_waldemar_pra.pdf" },
-      { nombre: "Instalação Windows Server 2012", "url": "docs/0773_win_server.pdf" },
-      { nombre: "Configuração de Diretórios e Permissões", "url": "docs/0773_diretorios.docx" }
+      { nombre: "PRA - Reflexão", "url": "" },//pendente
+      { nombre: "Instalação Windows - Evidencia", "url": "/doc/0773/atividade.pdf" }
     ]
   }, 
   "0774": {
@@ -94,7 +89,8 @@ const materiasData = {
         },
         detalles: { horas: "50h", creditos: "4.50" },
         trabajos: [
-            { nombre: "Manual de Rede Local", url: "documentos/0774_manual.pdf" }
+            { nombre: "PRA - Reflexão", url: "" },//pendente
+            { nombre: "Rede UbuntuServer", url: "doc/0774/rede ubuntuServer waldemarPerez.pdf" }
         ]
     },
     "0775": {
@@ -109,14 +105,10 @@ const materiasData = {
       creditos: "4.50"
     },
     trabajos: [
-      { nombre: "Administração de AD-DS e OU", url: "docs/0775_ad_ds.pdf" },
-      { nombre: "Configuração de DHCP e GPO", url: "docs/0775_dhcp_gpo.pdf" },
-      { nombre: "Gestão de Servidor Web IIS", url: "docs/0775_iis.pdf" },
-      { nombre: "Manual Wireshark e Monitorização", url: "docs/0775_wireshark.pdf" },
-      { nombre: "Kit de Ferramentas de Administração", url: "docs/0775_kit_ferramentas.docx" }
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Partilhas de pastas e discos", url: "doc/0775/Partila pastas e discos waldemarPerez.pdf" }
     ]
   },
-
   "0782": {
     es: "Programación en C/C++ - estructura básica y conceptos fundamentales",
     pt: "Programação em C/C++ - estrutura básica e conceitos fundamentais",
@@ -129,10 +121,8 @@ const materiasData = {
       creditos: "4.50"
     },
     trabajos: [
-      { nombre: "Lógica, Algoritmia e Pseudo-Código", url: "docs/0778_logica.pdf" },
-      { nombre: "Estruturas de Decisão e Operadores", url: "docs/0778_decisao.pdf" },
-      { nombre: "Manipulação de Strings em C", url: "docs/0778_strings.pdf" },
-      { nombre: "Gestão de Variáveis e Memória", url: "docs/0778_memoria.pdf" }
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Sistema de faturação", url: "doc/0782/Sistema de faturação.pdf" },
     ]
   },
   "0783": {
@@ -147,9 +137,8 @@ const materiasData = {
       creditos: 4.50
     },
     trabajos: [
-      { nombre: "Implementação de Ciclos e Iterações", url: "docs/0783_ciclos.pdf" },
-      { nombre: "Exercícios de Decisões Aninhadas", url: "docs/0783_decisoes.pdf" },
-      { nombre: "Validação de Dados e Controlo de Fluxo", url: "docs/0783_validacao.c" }
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Exercícios em C", url: "doc/0783/ex em c.pdf" },
     ]
   },
   "0781": {
@@ -164,10 +153,8 @@ const materiasData = {
       creditos: 4.50
     },
     trabajos: [
-      { nombre: "Modelação de Dados (DFD e DEA)", url: "docs/0781_modelacao.pdf" },
-      { nombre: "Projeto: Loja Online de Partituras (MySQL)", url: "docs/0781_projeto_loja.pdf" },
-      { nombre: "Normalização e Dicionário de Dados", url: "docs/0781_normalizacao.pdf" },
-      { nombre: "Fluxogramas e Pseudocódigo", url: "docs/0781_algoritmos.pdf" }
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Projeto: Loja Online de Partituras (MySQL)", url: "doc/0781/PNG Loja de partituras - waldemarPerez.png" }
     ]
   },
   "0786": {
@@ -182,10 +169,8 @@ const materiasData = {
       creditos: 4.50
     },
     trabajos: [
-      { nombre: "Instalação e Configuração MySQL Workbench", url: "docs/0786_setup_workbench.pdf" },
-      { nombre: "Administração de Objetos e SQL Scripts", url: "docs/0786_scripts_admin.sql" },
-      { nombre: "Configuração de Backups e Segurança", url: "docs/0786_backups_seguranca.pdf" },
-      { nombre: "Gestão de Utilizadores e Permissões", url: "docs/0786_users_db.pdf" }
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Manual de mySQL", url: "doc/0786/manual mysql waldemarPerez.pdf" }
     ]
   },
   
@@ -201,10 +186,8 @@ const materiasData = {
       creditos: 4.50
     },
     trabajos: [
-      { nombre: "Projeto Web Dinâmico (PHP/SQL)", url: "docs/0787_projeto_final.pdf" },
-      { nombre: "Implementação de CRUD e Formulários", url: "docs/0787_crud_php.pdf" },
-      { nombre: "Configuração de Servidor e SMTP", url: "docs/0787_smtp_hosting.pdf" },
-      { nombre: "Gestão de Transações e Segurança", url: "docs/0787_seguranca.sql" }
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Projeito final", url: "doc/0787/trabalhoFinal waldemarPerez.pdf" },
     ]
   }, 
 
@@ -220,10 +203,8 @@ const materiasData = {
       creditos: 2.25
     },
     trabajos: [
-      { nombre: "Estrutura Global e Hierarquia HTML5", url: "docs/0792_hierarquia.pdf" },
-      { nombre: "Implementação de Estilos CSS", url: "docs/0792_estilos.css" },
-      { nombre: "Criação de Tabelas e Formulários", url: "docs/0792_conteudo.html" },
-      { nombre: "Desenvolvimento de Páginas Web", url: "docs/0792_projeto_paginas.pdf" }
+      { nombre: "PRA - Reflexão", url: "doc/0792/0792 waldemarPerez.pdf" },
+      { nombre: "Glosario web", url: "doc/0792/glosario web waldemarPerez.pdf" },
     ]
   },
 
@@ -239,10 +220,8 @@ const materiasData = {
       creditos: 2.25
     },
     trabajos: [
-      { nombre: "Manipulação de Elementos com JS", url: "docs/0793_js_elementos.pdf" },
-      { nombre: "Projeto: Galeria e Filtros (Stand de Automóveis)", url: "docs/0793_projeto_stand.html" },
-      { nombre: "Validação de Formulários com Scripts", url: "docs/0793_validacao.pdf" },
-      { nombre: "Reforço de Layout e Estilos CSS", url: "docs/0793_css_estilos.css" }
+      { nombre: "PRA - Reflexão", url: "doc/0793/0793 waldemar Perez_Actualizado.pdf" },
+      { nombre: "Web práctica", url: "https://sonsvinilos.netlify.app/" }
     ]
   }, 
 
@@ -258,9 +237,8 @@ const materiasData = {
       creditos: 4.50
     },
     trabajos: [
-      { nombre: "Gestão e Formatação de Dados em Excel", url: "docs/0778_formatacao.xlsx" },
-      { nombre: "Aplicação de Fórmulas e Referências", url: "docs/0778_formulas.pdf" },
-      { nombre: "Organização de Tabelas e Impressão", url: "docs/0778_tabelas.pdf" }
+      { nombre: "PRA - Reflexão", url: "doc/0778/0778 Avaliação waldemarPerez (1).pdf" },
+      { nombre: "Ficha de inscripção", url: "doc/0778/Ficha de inscrição waldemarPerez.pdf" }
     ]
   },
 
@@ -276,9 +254,8 @@ const materiasData = {
       creditos: 4.50
     },
     trabajos: [
-      { nombre: "Formatação e Estruturação de Documentos", url: "docs/0754_formatacao.docx" },
-      { nombre: "Gestão de Tabelas e Elementos Visuais", url: "docs/0754_tabelas_graficos.pdf" },
-      { nombre: "Criação de Documentos Longos e Índices", url: "docs/0754_indices_estilos.pdf" }
+      { nombre: "PRA - Reflexão", url: "doc/0754/0754 waldemarPerez.pdf" },
+      { nombre: "Trabalho final", url: "doc/0754/Trabalho final waldemarPerez.pdf" }
     ]
   },
 
@@ -294,9 +271,8 @@ const materiasData = {
       creditos: 2.25
     },
     trabajos: [
-      { nombre: "Criação de Apresentações Dinâmicas", url: "docs/0755_apresentacao.pptx" },
-      { nombre: "Desenho e Elementos Multimédia", url: "docs/0755_multimedia.pdf" },
-      { nombre: "Configuração de Documentos Modelo", url: "docs/0755_master_slides.pdf" }
+      { nombre: "PRA - Reflexão", url: "doc/0779/0779 apresentação.pdf" },
+      { nombre: "Criação de Apresentações Dinâmicas", url: "doc/0779/Apresentação final Rascunho waldemarPerez (1).pdf" },
     ]
   },
 
@@ -312,10 +288,8 @@ const materiasData = {
       creditos: 4.50
     },
     trabajos: [
-      { nombre: "Levantamento de Requisitos (Loja de Retalho)", url: "docs/0780_requisitos_sistema.pdf" },
-      { nombre: "Plano de Instalação e Configuração", url: "docs/0780_plano_instalacao.pdf" },
-      { nombre: "Definição de Regras de Negócio", url: "docs/0780_regras_negocio.pdf" },
-      { nombre: "Estrutura de Segurança e Perfis de Acesso", url: "docs/0780_seguranca_perfis.pdf" }
+      { nombre: "PRA - Reflexão", url: "doc/0780/0780 avaliação  waldemarPErez (4).pdf" },
+      { nombre: "Trabalho de grupo", url: "doc/0780/Trabalho de grupo waldemarPerez.pdf" }
     ]
   },
 
@@ -331,9 +305,119 @@ const materiasData = {
       creditos: 2.25
     },
     trabajos: [
-      { nombre: "Análise da Organização e Fluxo Documental", url: "docs/0776_organizacao.pdf" },
-      { nombre: "Circuitos de Informação e Decisão", url: "docs/0776_sistemas_info.pdf" },
-      { nombre: "Segurança e Comunicação Empresarial", url: "docs/0776_seguranca_comms.pdf" }
+      { nombre: "PRA - Reflexão", url: "doc/0776/0776 avaliação  waldemarPerez (2) (1).pdf" },
+      { nombre: "Sistema de informação da empresa", url: "doc/0776/trabalho 1 waldemarPerez.pdf" }
+    ]
+  },
+  "0787": {
+    es: "Administración de bases de datos",
+    pt: "Administração de base de dados",
+    resumen: {
+      es: "Estudio centrado en la gestión avanzada y mantenimiento de sistemas de bases de datos. El módulo abordó la implementación de modelos de replicación, la gestión de transacciones distribuidas y la automatización de copias de seguridad (backups) y reposiciones para garantizar la integridad del sistema. Asimismo, se trabajó en la importación y exportación de datos, aplicando reglas de gestión, restricciones y triggers.",
+      pt: "Estudo focado na gestão avançada e manutenção de sistemas de gestão de bases de dados. O módulo abordou a implementação de modelos de replicação, a gestão de transações distribuídas e a automatização de cópias de segurança (backups) e reposições para garantir a integridade do sistema. Além disso, trabalhou-se na importação e exportação de dados, aplicando regras de gestão, restrições (constraints) e triggers."
+    },
+    detalles: {
+      horas: "50h",
+      creditos: 4.5
+    },
+    trabajos: [
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Administração de Base de Dados", url: "doc/0787/trabalhoFinal waldemarPerez.pdf" }
+    ]
+  },
+  "0788": {
+    es: "Instalación y administración de servidores WEB",
+    pt: "Instalação e administração de servidores WEB",
+    resumen: {
+      es: "Módulo enfocado en la configuración y gestión de infraestructuras para el alojamiento de aplicaciones web. Se abordó el análisis de requisitos de hardware para servidores (procesador, memoria RAM y almacenamiento), así como el despliegue de servicios en entornos virtuales (VMS). Se trabajó en la implementación de servidores de transferencia de archivos mediante FileZilla Server y la configuración de protocolos FTP para la publicación y administración de contenidos en la web.",
+      pt: "Módulo focado na configuração e gestão de infraestruturas para o alojamento de aplicações web. Abordou-se a análise de requisitos de hardware para servidores (processador, memória RAM e armazenamento), bem como a implementação de serviços em ambientes virtuais (VMS). Trabalhou-se no desenvolvimento de servidores de transferência de ficheiros através do FileZilla Server e na configuração de protocolos FTP para a publicação e administração de conteúdos na web."
+    },
+    detalles: {
+      horas: "50h",
+      creditos: 4.5
+    },
+    trabajos: [
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Configuração FTP e FileZilla", url: "doc/0788/aplicações web waldemarPerez.pdf" }
+    ]
+  },
+  "0784": {
+    es: "Programación en C/C++ - funciones y estructuras",
+    pt: "Programação em C/C++ - funções e estruturas",
+    resumen: {
+      es: "Módulo exhaustivo dedicado al desarrollo de la lógica de programación y la resolución de problemas complejos mediante el lenguaje C. El aprendizaje abarcó desde el control de flujos básico (estructuras condicionales y ciclos repetitivos) hasta la creación de menús interactivos multi-nivel utilizando 'switch-case'. Se profundizó en la manipulación avanzada de datos mediante el uso de vectores (arrays unidimensionales) y matrices bidimensionales, la implementación de algoritmos de ordenación (creciente y decreciente), la gestión de funciones matemáticas específicas y la generación de números aleatorios para la simulación de sistemas lógicos. Todo el desarrollo incluyó la validación estricta de datos de entrada y la modularización del código.",
+      pt: "Módulo abrangente dedicado ao desenvolvimento da lógica de programação e à resolução de problemas complexos através da linguagem C. A aprendizagem abrangeu desde o controlo de fluxos básico (estruturas condicionais e ciclos de repetição) até à criação de menus interativos multi-nível utilizando 'switch-case'. Aprofundou-se a manipulación avançada de dados através do uso de vetores (arrays unidimensionais) e matrizes bidimensionais, a implementação de algoritmos de ordenação (crescente e decrescente), a gestão de funções matemáticas específicas e a geração de números aleatórios para a simulação de sistemas lógicos. Todo o desenvolvimento incluiu a validação estrita de dados de entrada e a modularização do código."
+    },
+    detalles: {
+      horas: "50h",
+      creditos: 4.5
+    },
+    trabajos: [
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Euro milhoes", url: "doc/0784/euromilhoes.pdf" },
+    ]
+  },
+  "10791": {
+    es: "Desarrollo de aplicaciones web en Java",
+    pt: "Desenvolvimento de aplicações web em JAVA",
+    resumen: {
+      es: "Módulo enfocado en el diseño, desarrollo e implementación de aplicaciones web robustas utilizando la plataforma empresarial Java EE. La formación abarcó los fundamentos de las tecnologías front-end (HTML, CSS y JavaScript) y su integración con potentes arquitecturas back-end. Se profundizó en la gestión de la persistencia de datos mediante entidades JPA, la lógica de negocio con EJBs, la comunicación estructurada a través de servicios web SOAP (JAX-WS) y REST (JAX-RS), el manejo de mensajería asíncrona con JMS, y la creación de interfaces dinámicas con Servlets, JSPs y WebSockets, garantizando siempre la seguridad en el entorno web.",
+      pt: "Módulo focado no design, desenvolvimento e implementação de aplicações web robustas utilizando a plataforma empresarial Java EE. A formação abrangeu os fundamentos das tecnologias front-end (HTML, CSS e JavaScript) e a sua integração com arquiteturas dinâmicas no back-end. Aprofundou-se a gestão da persistência de dados através de entidades JPA, a lógica de negócio com EJBs, a comunicação estruturada através de serviços web SOAP (JAX-WS) e REST (JAX-RS), a gestão de mensagens assíncronas com JMS, e a criação de interfaces dinâmicas com Servlets, JSPs e WebSockets, garantindo sempre a segurança no ambiente web."
+    },
+    detalles: {
+      horas: "50h",
+      creditos: 4.5
+    },
+    trabajos: [
+      { nombre: "PRA - Reflexão", url: "" },//pendente
+      { nombre: "Desenvolvimento de Aplicação Java EE", url: "doc/10791/Evidencia_UFCD_10791_Java_Web-v2.pdf" }
+    ]
+  },
+  "0789": {
+    es: "Fundamentos de lenguaje Java",
+    pt: "Fundamentos de linguagem JAVA",
+    resumen: {
+      es: "Módulo introductorio al paradigma de programación orientada a objetos utilizando el lenguaje Java. El aprendizaje se centró en el desarrollo de la lógica algorítmica a través de ejercicios prácticos estructurales, la implementación de estructuras de decisión condicionales (if-else, switch) y el dominio de los ciclos de repetición iterativos (for, while, do-while). Además, se abordaron los conceptos de sintaxis estricta, la declaración de variables y la gestión básica de datos de entrada/salida como preparación para la resolución de los ejercicios formales de evaluación.",
+      pt: "Módulo introdutório ao paradigma de programação orientada a objetos utilizando a linguagem Java. A aprendizagem centrou-se no desenvolvimento da lógica algorítmica através de exercícios práticos estruturais, na implementação de estruturas de decisão condicionais (if-else, switch) e no domínio dos ciclos de repetição iterativos (for, while, do-while). Além disso, abordaram-se os conceitos de sintaxe estrita, a declaração de variáveis e a gestão básica de dados de entrada/saída como preparação para a resolução dos exercícios formais de avaliação."
+    },
+    detalles: {
+      horas: "50h",
+      creditos: 4.5
+    },
+    trabajos: [
+      { nombre: "PRA - Reflexão", url: "docs/0789_waldemar_pra.pdf" },//pendente
+      { nombre: "Exercícios Estruturais e Decisão", url: "doc/0789/evidencia_java_ufcd0789.pdf" }
+    ]
+  },"0785": {
+    es: "Programación en C/C++ - formas complejas",
+    pt: "Programação em C/C++ - formas complexas",
+    resumen: {
+      es: "Módulo avanzado enfocado en el desarrollo de soluciones algorítmicas complejas y la estructuración de datos en C/C++. La formación se centró en la manipulación avanzada de matrices bidimensionales y la integración de operaciones aritméticas selectivas por filas mediante funciones modularizadas. Se profundizó en el modelado de datos del mundo real utilizando vectores de estructuras ('struct') para la gestión de registros compuestos (cadenas, enteros y flotantes), aplicando funciones de búsqueda por clave, filtrado condicional y cálculos proporcionales cruzados con vectores de gastos dinámicos.",
+      pt: "Módulo avançado focado no desenvolvimento de soluções algorítmicas complexas e na estruturação de dados em C/C++. A formação centrou-se na manipulação avançada de matrizes bidimensionais e na integração de operações aritméticas seletivas por linhas através de funções modularizadas. Aprofundou-se o modelamento de dados do mundo real utilizando vetores de estruturas ('struct') para a gestão de registos compostos (strings, inteiros e floats), aplicando funções de pesquisa por chave, filtragem condicional e cálculos proporcionais cruzados com vetores de despesas dinâmicas."
+    },
+    detalles: {
+      horas: "50h",
+      creditos: 4.5
+    },
+    trabajos: [
+      { nombre: "PRA - Reflexão", url: "docs/0785_waldemar_pra.pdf" },
+      { nombre: "Manipulação de Matrizes e Funções", url: "docs/0785_tarefa1_matrizes.pdf" }
+    ]
+  },
+  "0791": {
+    es: "Programación en Java - avanzada",
+    pt: "Programação em JAVA - avançada",
+    resumen: {
+      es: "Módulo avanzado enfocado en profundizar en la lógica algorítmica y las estructuras de datos utilizando el lenguaje Java. El aprendizaje se centró en el desarrollo intensivo de operaciones con vectores y matrices, abarcando desde la manipulación básica hasta la resolución de problemas complejos que incluyen el filtrado selectivo de datos, algoritmos de ordenación alfabética y numérica, búsqueda binaria, eliminación de duplicados y control de frecuencias. Se preparó una base sólida en programación orientada a objetos para estructurar aplicaciones eficientes y escalables.",
+      pt: "Módulo avançado focado no aprofundamento da lógica algorítmica e das estruturas de dados utilizando a linguagem Java. A aprendizagem centrou-se no desenvolvimento intensivo de operações com vetores e matrizes, abrangendo desde a manipulação básica até à resolução de problemas complexos que incluem a filtragem seletiva de dados, algoritmos de ordenação alfabética e numérica, pesquisa binária, eliminação de duplicados e controlo de frequências. Preparou-se uma base sólida em programação orientada a objetos para estruturar aplicações eficientes e escaláveis."
+    },
+    detalles: {
+      horas: "50h",
+      creditos: 4.5
+    },
+    trabajos: [
+      { nombre: "PRA - Reflexão", url: "docs/0791_waldemar_pra.pdf" },
+      { nombre: "Ficha Prática - Resolução de Vetores Avançados", url: "docs/0791_ficha_vetores.pdf" }
     ]
   }
 
