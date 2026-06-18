@@ -32,7 +32,8 @@ const translation = {
     catHardware: "Hardware & Redes",
     catProgramacion: "Programación",
     catWeb: "Web & Datos",
-    catGestion: "Gestión"
+    catGestion: "Gestión",
+    skillsTitle: "⚡ Competencias Técnicas"
   },
   pt: {
     btn: "PT",
@@ -57,7 +58,8 @@ const translation = {
     catHardware: "Hardware e Redes",
     catProgramacion: "Programação",
     catWeb: "Web & Dados",
-    catGestion: "Gestão"
+    catGestion: "Gestão",
+    skillsTitle: "⚡ Competências Técnicas"
   },
 };
 
@@ -180,6 +182,11 @@ function actualizarInterfaz() {
   if (labelStatus) labelStatus.innerText = translation[currentLang].labelStatus;
   if (statusDetail) statusDetail.innerHTML = translation[currentLang].statusDetail;
 
+  const skillsTitle = document.querySelector(".skills-title");
+  if (skillsTitle) {
+      skillsTitle.innerText = translation[currentLang].skillsTitle || "⚡ Competências Técnicas";
+  }
+
   actualizarTooltips();
   mostrarCita();
 }
@@ -245,6 +252,7 @@ function renderizarContenidoUFCD(codigo) {
     const statsElem = document.getElementById("det-stats");
     const resumenElem = document.getElementById("det-resumen");
     const linksDiv = document.getElementById("det-links");
+    
     
     if (tituloElem) tituloElem.innerText = `${codigo} - ${info[currentLang]}`;
     
