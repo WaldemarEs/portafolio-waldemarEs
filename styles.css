@@ -595,3 +595,35 @@ body.no-scroll {
         font-size: 2rem !important;
     }
 }
+
+/* ====================================================
+   AJUSTES PARA DISPOSITIVOS MÓVILES (PANTALLAS PEQUEÑAS)
+   ==================================================== */
+@media (max-width: 768px) {
+    /* 1. Cambia el menú de las UFCD y detalles a formato vertical */
+    .tech-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    /* 2. Hace que tanto la lista como el detalle ocupen todo el ancho disponible */
+    .materia-sidebar, .ufcd-detalle {
+        flex: none;
+        width: 100%;
+    }
+
+    /* 3. Ajusta el encabezado (logo y descripción) para que no se amontone */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    /* 4. Centra los enlaces del menú de navegación */
+    #main-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
