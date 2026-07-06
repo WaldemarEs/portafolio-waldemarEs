@@ -797,3 +797,86 @@ body.no-scroll {
         gap: 15px;
     }
 }
+/* ======================================
+   SECCIÓN PROYECTOS (ESTILO MINIMALISTA)
+   ====================================== */
+.projects-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.custom-project-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid #ff6000; /* Línea de acento naranja idéntica a tus UFCD */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.project-card-header h3 {
+    color: #ff6000;
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.project-card-header p {
+    color: #555;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.project-card-tag {
+    background-color: #f5f2ed;
+    color: #444;
+    padding: 2px 10px;
+    border-radius: 2px;
+    font-size: 0.7rem;
+    border: 1px solid #e8e4df;
+}
+
+.project-card-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Reutilizando tu estilo existente de botones de evidencia */
+.project-card-actions a {
+    text-decoration: none;
+    color: #ff6000;
+    border: 1px solid #ff6000;
+    padding: 5px 14px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.project-card-actions a:hover {
+    background-color: #ff6000;
+    color: white;
+}

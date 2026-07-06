@@ -63,6 +63,19 @@ const translation = {
   },
 };
 
+// ======================================
+// Datos de Proyectos Reales
+// ======================================
+const proyectosData = [
+  {
+    titulo: "TockBlog",
+    links: { link: "https://tockblog.com"},
+    tags: ["Astro", "Tailwind CSS", "TypeScript", "Cloudflare Pages"],
+    es: "Un blog de noticias moderno y optimizado dedicado al ecosistema de hardware y software de Nintendo. Diseñado con un enfoque estricto en la velocidad de carga, rendimiento y posicionamiento SEO.",
+    pt: "Um blog de notícias moderno e otimizado dedicado ao ecossistema de hardware e software da Nintendo. Desenvolvido com um foco estrito em velocidade de carregamento, performance e SEO."
+  }
+];
+
 // ======================
 // Citas
 // ======================
@@ -90,15 +103,12 @@ function abrirVisor(url, nombre) {
         return;
     }
     
-    // Limpiar iframe antes de cargar nuevo contenido
     iframe.src = "about:blank";
     
-    // Mostrar indicador de carga
     if (label) {
         label.innerText = `Cargando: ${nombre}...`;
     }
     
-    // Cargar el nuevo contenido
     setTimeout(() => {
         iframe.src = url;
         if (label) label.innerText = nombre;
@@ -116,7 +126,6 @@ function cerrarVisor() {
         visor.classList.remove('activa-visor');
         document.body.classList.remove('no-scroll');
         
-        // Limpiar iframe después de cerrar (liberar recursos)
         if (iframe) {
             setTimeout(() => {
                 iframe.src = "about:blank";
@@ -153,7 +162,6 @@ function actualizarInterfaz() {
   if (techP) techP.innerText = translation[currentLang].techDesc;
   if (ufcdH2) ufcdH2.innerText = translation[currentLang].ufcdTitle;
 
-  // TRADUCCIÓN DE CATEGORÍAS UFCD
   const catHardware = document.getElementById("cat-hardware");
   const catProgramacion = document.getElementById("cat-programacion");
   const catWeb = document.getElementById("cat-web");
@@ -167,7 +175,7 @@ function actualizarInterfaz() {
   if (codigoUfcdAbierta) {
     renderizarContenidoUFCD(codigoUfcdAbierta);
   }
-  // TRADUCCIÓN SECCIÓN CONTACTO
+
   const contactTitle = document.getElementById("contact-title");
   const contactQuote = document.getElementById("contact-quote");
   const labelEmail = document.getElementById("label-email");
@@ -189,6 +197,9 @@ function actualizarInterfaz() {
 
   actualizarTooltips();
   mostrarCita();
+  
+  // Renderizar proyectos en el idioma correcto tras el cambio
+  renderizarProyectos(); 
 }
 
 function mostrarCita() {
@@ -198,7 +209,6 @@ function mostrarCita() {
 }
 
 function actualizarTooltips() {
-  // Comprobar que materiasData existe
   if (typeof materiasData === 'undefined') return;
   
   const spans = document.querySelectorAll(".materia-tags span");
@@ -236,7 +246,6 @@ function cambiarIdioma() {
 }
 
 function renderizarContenidoUFCD(codigo) {
-    // Comprobar que materiasData existe
     if (typeof materiasData === 'undefined') {
         console.error("materiasData no está definido");
         return;
@@ -252,7 +261,6 @@ function renderizarContenidoUFCD(codigo) {
     const statsElem = document.getElementById("det-stats");
     const resumenElem = document.getElementById("det-resumen");
     const linksDiv = document.getElementById("det-links");
-    
     
     if (tituloElem) tituloElem.innerText = `${codigo} - ${info[currentLang]}`;
     
@@ -310,6 +318,43 @@ function activarDetallesUFCD() {
     });
 }
 
+// Generación Dinámica de Proyectos Reales
+function renderizarProyectos() {
+  const container = document.getElementById("projects-container");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  proyectosData.forEach(proyecto => {
+    // Generar tags HTML
+    const tagsHTML = proyecto.tags.map(tag => `<span class="project-card-tag">${tag}</span>`).join("");
+
+    // Determinar el texto del botón según el idioma activo
+    const textoBoton = currentLang === 'es' ? '🌐 Visitar sitio' : '🌐 Ir para o site';
+
+    // Crear el botón dinámico usando la propiedad .link que definiste
+    let botonesHTML = "";
+    if (proyecto.links && proyecto.links.link) {
+      botonesHTML = `<a href="${proyecto.links.link}" target="_blank" rel="noopener noreferrer">${textoBoton}</a>`;
+    }
+
+    // Estructura limpia de la tarjeta
+    const card = document.createElement("div");
+    card.className = "custom-project-card";
+    card.innerHTML = `
+      <div class="project-card-header">
+        <h3>${proyecto.titulo}</h3>
+        <p>${currentLang === 'es' ? proyecto.es : proyecto.pt}</p>
+      </div>
+      <div>
+        <div class="project-card-tags">${tagsHTML}</div>
+        <div class="project-card-actions">${botonesHTML}</div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
 // ======================
 // Eventos e Inicialización
 // ======================
@@ -324,7 +369,6 @@ navLinks.forEach((link) => {
 
 langBtn.addEventListener("click", cambiarIdioma);
 
-// Cerrar visor con tecla ESC
 document.addEventListener('keydown', (e) => {
     if (e.key === "Escape") cerrarVisor();
 });
@@ -335,15 +379,14 @@ window.onload = () => {
     currentLang = savedLang;
   }
 
-  // Comprobar si materiasData existe antes de continuar
   if (typeof materiasData !== 'undefined') {
     actualizarInterfaz();
     alternarSecciones("tech-section");
     activarDetallesUFCD();
+    
+    // Cargar proyectos inmediatamente en la primera vista
+    renderizarProyectos(); 
 
-    // ====================================================
-    // FORZAR LA APERTURA DE LA PRIMERA UFCD POR DEFECTO
-    // ====================================================
     const ufcdPorDefecto = "0784"; 
     const container = document.getElementById("ufcd-detalle-container");
     
@@ -355,7 +398,6 @@ window.onload = () => {
 
   } else {
     console.error("Error: No se cargó el archivo ufcds.js");
-    // Mostrar mensaje al usuario
     const ufcdSection = document.querySelector("#ufcd-section");
     if (ufcdSection) {
       ufcdSection.innerHTML += '<p style="color:red; padding:20px;">Error: Datos de UFCD no cargados</p>';
