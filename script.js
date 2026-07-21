@@ -73,7 +73,14 @@ const proyectosData = [
     tags: ["Astro", "Tailwind CSS", "TypeScript", "Cloudflare Pages"],
     es: "Un blog de noticias moderno y optimizado dedicado al ecosistema de hardware y software de Nintendo. Diseñado con un enfoque estricto en la velocidad de carga, rendimiento y posicionamiento SEO.",
     pt: "Um blog de notícias moderno e otimizado dedicado ao ecossistema de hardware e software da Nintendo. Desenvolvido com um foco estrito em velocidade de carregamento, performance e SEO."
-  }
+  },
+   {
+  titulo: "TockTexture Studio",
+  links: { link: "https://tocktexture.pages.dev/" },
+  tags: ["TypeScript", "Vite", "Web Workers", "Tailwind CSS", "Cloudflare Pages"],
+  es: "Una suite web de herramientas para desarrolladores de videojuegos y artistas 3D orientada al optimizado de texturas. Permite empaquetado de canales (Channel Packing), algoritmos de Alpha Bleed y verificación Power of Two (PoT) directamente en el navegador de forma ultra rápida usando Web Workers.",
+  pt: "Uma suite web de ferramentas para desenvolvedores de jogos e artistas 3D focada na otimização de texturas. Permite empacotamento de canais (Channel Packing), algoritmos de Alpha Bleed e verificação Power of Two (PoT) diretamente no navegador de forma ultra rápida usando Web Workers."
+}
 ];
 
 // ======================
